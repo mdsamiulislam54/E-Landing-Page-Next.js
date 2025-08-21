@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className='flex justify-between items-center py-4 container mx-auto px-4 max-w-screen-xl'>
         <div>
             <h1>
-                <Link href="/">NextBuy</Link>
+                <Link href="/" className='text-2xl text-bold'>NextBuy</Link>
             </h1>
         </div>
         <div className=''>
@@ -27,7 +27,7 @@ const Navbar = () => {
             </ul>
         </div>
         <div>
-            <Link href="/cart">Login</Link>
+            <Link href="/loin" className='inline-flex items-center justify-center rounded-xl bg-white px-5 py-2 font-medium text-gray-800 transition hover:bg-transparent hover:text-white hover:outline hover:outline-2 hover:outline-white'>Login</Link>
         </div>
     </nav>
   )

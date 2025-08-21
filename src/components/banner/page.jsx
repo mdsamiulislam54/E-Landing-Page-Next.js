@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import BannerImages from '@/app/acesst/banner.png'
+import BannerImages from '../../acesst/banner.png'
 
 const Banner = () => {
     return (
