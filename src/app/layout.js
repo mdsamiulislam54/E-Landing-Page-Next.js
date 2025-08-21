@@ -23,11 +23,13 @@ export default function RootLayout({ children }) {
         className={geistSans.className}
       >
         <header className="bg-gray-800 text-white">
-          <Navbar/>
+          <Navbar />
         </header>
-        {children}
+        <main>
+          {children}
+        </main>
         <footer>
-          <Footer/>
+          <Footer />
         </footer>
       </body>
     </html>
