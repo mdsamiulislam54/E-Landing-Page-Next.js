@@ -16,8 +16,12 @@ const Banner = () => {
                     <li className="">Free Shipping</li>
                     <li className="">30-Day Returns</li>
                 </div>
-                <Link href="/products" className="bg-gray-800 text-white px-4 py-2 rounded">Shop Now</Link>
-
+                  <Link
+            href="/products"
+            className="inline-flex items-center justify-center rounded-xl bg-gray-800 px-5 py-3 font-medium text-gray-100 transition-all duration-500 hover:bg-gray-100 hover:text-gray-800  hover:outline-2 hover:outline-gray-800"
+          >
+                    Shop Now
+          </Link>
             </div>
             <div className='flex-1 flex justify-cente4'>
                 <Image src={BannerImages} width={500} height={500} alt='banner images'/>
