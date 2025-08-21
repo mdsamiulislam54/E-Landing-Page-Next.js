@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navber/page";
+import Footer from "@/components/footer/page";
 
 const geistSans = Poppins({
   subsets: ["latin"],
@@ -20,7 +22,13 @@ export default function RootLayout({ children }) {
       <body
         className={geistSans.className}
       >
+        <header className="bg-gray-800 text-white">
+          <Navbar/>
+        </header>
         {children}
+        <footer>
+          <Footer/>
+        </footer>
       </body>
     </html>
   );
