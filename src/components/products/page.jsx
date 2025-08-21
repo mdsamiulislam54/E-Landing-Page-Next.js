@@ -1,10 +1,12 @@
+import { getProducts } from '@/lib/getProducts';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
 const Products = async () => {
-  const products = await fetch("http://localhost:3000/api/products").then(res => res.json());
-  console.log(products);
+  const products = await getProducts();
+ 
+
   return (
     <div className='bg-gray-100 py-16'>
       <div className='container max-w-screen-xl mx-auto px-4 py-8'>
