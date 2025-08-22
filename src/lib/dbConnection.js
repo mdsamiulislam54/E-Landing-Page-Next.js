@@ -3,10 +3,7 @@ export const collection = {
     products: "products",
 }
 export  const dbConnection = async (dbCollection)=>{
-    const client = new MongoClient(process.env.MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
+    const client = new MongoClient(process.env.MONGODB_URI, );
 
     return client.connect()
     .then(()=>{

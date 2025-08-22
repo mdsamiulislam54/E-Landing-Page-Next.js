@@ -7,7 +7,7 @@ import { FaCcVisa, FaCcMastercard, FaCcPaypal } from "react-icons/fa";
 export default function Footer() {
   return (
     <div className="bg-gray-800 text-white py-10">
-      <div className="container mx-auto grid md:grid-cols-4 gap-8 px-6">
+      <div className="container max-w-screen mx-auto grid md:grid-cols-4 gap-8 px-6">
       
         <div>
           <h2 className="text-xl font-bold mb-4">NextBuy</h2>
