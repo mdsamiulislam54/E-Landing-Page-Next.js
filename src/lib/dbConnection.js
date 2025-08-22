@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb"
 export const collection = {
     products: "products",
+    users: "user",
 }
 export  const dbConnection = async (dbCollection)=>{
     const client = new MongoClient(process.env.MONGODB_URI, );
