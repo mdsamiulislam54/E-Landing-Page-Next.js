@@ -56,6 +56,7 @@ export default function AddProductForm() {
                     <input
                         type="text"
                         name="name"
+                        required
                         value={form.name}
                         onChange={handleChange}
                         className="w-full border rounded px-3 py-2"
@@ -68,6 +69,7 @@ export default function AddProductForm() {
                     <input
                         type="text"
                         name="brand"
+                        required
                         value={form.brand}
                         onChange={handleChange}
                         className="w-full border rounded px-3 py-2"
@@ -80,6 +82,7 @@ export default function AddProductForm() {
                     <input
                         type="number"
                         name="price"
+                        required
                         value={form.price}
                         onChange={handleChange}
                         className="w-full border rounded px-3 py-2"
@@ -91,6 +94,7 @@ export default function AddProductForm() {
                     <label className="block font-medium">Color</label>
                     <input
                         type="text"
+                        required
                         name="color"
                         value={form.color}
                         onChange={handleChange}
@@ -104,6 +108,7 @@ export default function AddProductForm() {
                     <input
                         type="text"
                         name="size"
+                        required
                         value={form.size.join(", ")}
                         onChange={handleChange}
                         className="w-full border rounded px-3 py-2"
@@ -116,6 +121,7 @@ export default function AddProductForm() {
                     <input
                         type="text"
                         name="features"
+                        required
                         value={form.features.join(", ")}
                         onChange={handleChange}
                         className="w-full border rounded px-3 py-2"
@@ -128,6 +134,7 @@ export default function AddProductForm() {
                     <input
                         type="text"
                         name="image"
+                        required
                         value={form.image}
                         onChange={handleChange}
                         className="w-full border rounded px-3 py-2"
@@ -141,6 +148,7 @@ export default function AddProductForm() {
                         name="description"
                         value={form.description}
                         onChange={handleChange}
+                        required
                         className="w-full border rounded px-3 py-2"
                         rows={5}
                         placeholder="Product description here..."

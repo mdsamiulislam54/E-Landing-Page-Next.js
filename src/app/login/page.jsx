@@ -3,29 +3,41 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { set } from "mongoose";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false); 
   const router = useRouter();
-
   const handleCredentialsLogin = async (e) => {
     e.preventDefault();
+    setLoading(true); 
 
+    if (!email || !password) {
+      alert("Email and password are required");
+      setLoading(false); 
+      return;
+    }
+
+    const userData = { email, password };
+    console.log("User Data:", userData);
+
+    // Call the login API
     const result = await signIn("credentials", {
-      
       email,
       password,
+      redirect: false, 
     });
-
-    if (!result.error) {
-        alert("Login successful!");
+     setLoading(false); 
+    if (result?.ok && !result.error) {
+      alert("Login successful! 🎉");
       router.push("/"); 
+
     } else {
       alert("Invalid credentials!");
     }
   };
-
   const handleGoogleLogin = () => {
     signIn("google", { callbackUrl: "/" });
     console.log("Google login initiated", );
@@ -70,7 +82,7 @@ export default function LoginPage() {
             type="submit"
             className="w-full bg-gray-800 text-white font-semibold py-2 rounded-lg hover:bg-gray-900 transition"
           >
-            Sign In
+            {loading ? "sign in..." : "sign in"}
           </button>
         </form>
 

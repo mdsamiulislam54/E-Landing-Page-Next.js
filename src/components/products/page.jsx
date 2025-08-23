@@ -1,10 +1,16 @@
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { getProducts } from '@/lib/getProducts';
+import { getServerSession } from 'next-auth';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+
 
 const Products = async () => {
   const products = await getProducts();
+  const session = await getServerSession(authOptions);
+  console.log("Session:", session);
+
+
  
 
   return (
@@ -21,6 +27,7 @@ const Products = async () => {
                       src={product.image}
                       alt={product.name}
                       fill
+                      sizes='100'
                       style={{ objectFit: 'contain', borderRadius: '0.5rem' }}
                     />
                   </div>

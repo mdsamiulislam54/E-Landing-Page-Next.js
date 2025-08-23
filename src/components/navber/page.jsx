@@ -6,7 +6,8 @@ import React from 'react';
 
 const Navbar = () => {
   const { data: session, status } = useSession();
-  console.log('session', session);
+  console.log(session)
+  
 
   return (
     <nav className='flex justify-between items-center py-4 container mx-auto px-4 max-w-screen-xl'>
