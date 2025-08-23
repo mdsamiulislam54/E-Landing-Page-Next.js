@@ -5,6 +5,8 @@ This project is mainly created to explore Next.js features, combining both front
 
 ---
 
+
+- Live Link: [https://e-landing-page-chi.vercel.app/](https://e-landing-page-chi.vercel.app/)
 ## Project Features
 
 ### 1. Layout & Styling
