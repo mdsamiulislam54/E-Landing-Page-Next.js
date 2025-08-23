@@ -1,6 +1,6 @@
 "use server"
 import { collection, dbConnection } from "@/lib/dbConnection";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";  
 
 export async function LoginUser(payload) {
     if (!payload.email || !payload.password) {
@@ -25,10 +25,9 @@ export async function LoginUser(payload) {
         // Compare plain password with hashed password
         const isPassword = await bcrypt.compare(password, user.password);
 
-        if (!isPassword)  return null;
+        if (!isPassword) return null;
 
-       return user
-       
+        return user;
 
     } catch (error) {
         console.error("Error logging in user:", error);

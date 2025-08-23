@@ -4,7 +4,7 @@ export const collection = {
     users: "user",
 }
 export  const dbConnection = async (dbCollection)=>{
-    const client = new MongoClient(process.env.MONGODB_URI, );
+    const client = new MongoClient(process.env.NEXT_PUBLIC_MONGODB_URI, );
 
     return client.connect()
     .then(()=>{

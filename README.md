@@ -1,6 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextBuy - E-Landing Page
 
-## Getting Started
+NextBuy is an **E-Landing Page** project built with **Next.js**.  
+This project is mainly created to explore Next.js features, combining both frontend and backend functionality.
+
+---
+
+## Project Features
+
+### 1. Layout & Styling
+- Responsive **Navbar** and **Footer** design.
+- **Hero Section** for a strong first impression.
+- Styling is done using **TailwindCSS**.
+- Products section displayed in **Card View** for easy browsing.
+
+### 2. Authentication
+- **Login** and **Registration** system implemented using **NextAuth**.
+- User data is saved in the database during registration.
+- Passwords are hashed using **bcryptjs** for security.
+- Only authenticated users can access protected routes.
+
+### 3. Products
+- T-Shirt products are displayed in **Card View**.
+- Each product has a **Details** button:
+  - Clicking it opens a **dynamic page** based on product ID.
+- **Add Products Page**:
+  - Logged-in users can add new products.
+  - This is a **private page**, access controlled using **Middleware** and JWT verification.
+
+### 4. JavaScript & React
+- Frontend logic handled using **React**.
+- State management and dynamic behavior using **useState**, **useEffect**, etc.
+
+### 5. Deployment
+- Deployed on **Vercel**.
+- During deployment, some issues were encountered:
+  - Middleware problems
+  - bcrypt module issues  
+  All issues were resolved and the project is now production-ready.
+
+---
+
+
+
 
 First, run the development server:
 
@@ -34,3 +75,33 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+---
+
+## Tech Stack
+- **Next.js 15**
+- **React**
+- **TailwindCSS**
+- **NextAuth** (Authentication)
+- **MongoDB** (Database)
+- **bcryptjs** (Password hashing)
+- **Vercel** (Deployment)
+
+---
+
+## Notes
+- Dynamic routes are used for product detail pages.
+- Middleware is used to secure private routes.
+- Users who are not logged in cannot access protected pages.
+- Future improvements could include:
+  - Shopping Cart
+  - Payment Gateway integration
+
+---
+
+## Author
+- Developed by: **Md. Shamiul Islam**
+- GitHub: [https://github.com/mdsamiulislam54](https://github.com/mdsamiulislam54)
+- Portfolio: [https://shamiul-portfolio.netlify.app/](https://shamiul-portfolio.netlify.app/)

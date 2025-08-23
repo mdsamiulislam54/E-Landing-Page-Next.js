@@ -1,6 +1,6 @@
 "use server"
 import { collection, dbConnection } from "@/lib/dbConnection";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 export async function RegisterUser(payload) {
     if(!payload.email && !payload.password) {
         return {
@@ -10,7 +10,7 @@ export async function RegisterUser(payload) {
     }
 
     try {
-        const { email, password,name } = payload;
+        const { email, password } = payload;
         const usersCollection = await dbConnection(collection.users);
         const existingUser = await usersCollection.findOne({ email });
 
